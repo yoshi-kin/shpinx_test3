@@ -1,0 +1,18 @@
+=========================
+2. インストール
+=========================
+
+2.1 sphinxインストール
+======================
+
+.. code-block:: bash
+
+    $ pip install sphinx
+
+
+2.2 確認
+================
+
+.. code-block:: bash
+
+    $ sphinx-quickstart --version

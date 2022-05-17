@@ -1,0 +1,173 @@
+==============================
+3.プロジェクト
+==============================
+
+* Pythonソースコードからドキュメント作成
+* コンテンツを追加してドキュメント作成
+
+3.1 Pythonソースコードからドキュメント作成
+==========================================
+
+3.1.1 ディレクトリ作成
+-----------------------
+
+| /sample_project
+|    ├── /docs
+|    └── /src
+|        ├── __init__.py
+|        └── sample_src.py
+
+3.1.2 ソースからドキュメント作成
+--------------------------------
+
+.. code-block:: bash
+
+    $ cd sample_project
+    $ sphinx-apidoc -F -o docs/ src/
+    $ cd docs
+
+3.1.3 設定ファイル
+---------------------
+
+.. code-block:: python
+
+    conf.py
+
+    # コメントアウト解除
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('../../src'))
+
+    # ...
+
+    extensions = [
+        'sphinx.ext.autodoc',
+        'sphinx.ext.viewcode',
+        'sphinx.ext.napoleon',
+        'sphinx.ext.todo',
+    ]
+
+    # ...
+
+    html_theme = 'sphinx_book_theme'
+
+.. code-block:: rst
+    
+    src.rst
+
+    src package
+    ===========
+
+    .. Submodules
+    .. ----------
+
+    sample\_src module
+    ----------------------
+
+    .. automodule:: sample_src
+        :members:
+        :undoc-members:
+        :show-inheritance:
+
+    .. Module contents
+    .. ---------------
+
+    .. .. automodule:: src
+    ..    :members:
+    ..    :undoc-members:
+    ..    :show-inheritance:
+
+.. code-block:: bash
+
+    $ make html
+
+_build/html/index.htmlを開く。
+
+3.1 作成したコンテンツからドキュメント作成
+==========================================
+
+3.1.1 作成
+------------
+
+* プロジェクト名
+* ドキュメントの製作者
+* プロジェクトのバージョン
+* プロジェクトのロケール
+* プロジェクトディレクトリ
+
+.. code-block:: bash
+
+    $ sphinx-quickstart -q -p プロジェクト名 -a 製作者 -v プロジェクトバージョン -l プロジェクトロケール プロジェクトディレクトリ
+    例）sphinx-quickstart -q -p "Book Review" -a sphinx-users.jp -v 1.0 -l ja project_dir
+
+3.1.2 ディレクトリ構成
+-----------------------
+
+| /sample_project
+|    ├── _build
+|    ├── _static
+|    ├── _templates
+|    ├── conf.py
+|    ├── index.rst
+|    ├── make.bat
+|    └── Makefile
+
+
+3.1.3 HTML作成
+----------------
+
+.. code-block:: bash
+
+    $ make html
+
+index.rstをもとに_build/htmlが作成される。
+
+3.1.4 HTML表示
+----------------
+
+_build/html/index.htmlを開くと、ドキュメントのトップページが表示される。
+
+3.1.5 コンテンツ追加
+---------------------
+
+index.rst
+
+.. code-block:: rst
+
+    .. toctree::
+        :maxdepth: 2
+        .. 一行開ける
+        .. コンテンツファイル
+        children/introduction.rst
+
+
+children/introduction.rstを作成
+
+introduction.rst
+
+.. code-block:: rst
+
+    ==========================
+    1.導入 (セクションレベル1）
+    ==========================
+
+    1.1 Sphinxとは？ (セクションレベル2）
+    =====================================
+
+    Python製のドキュメント作成ツール。
+    reStructuredText記法で書いたテキストファイル(.rst)をHTML、 PDFやepubなどの様々な形式へ簡単に変換できる。
+
+    1.2 具体例
+    ===========
+
+    PythonやFlask、各種Pythonライブラリのドキュメント
+
+    * `Pythonドキュメント <https://docs.python.org/3/>`_
+    * `Flaskドキュメント <https://flask.palletsprojects.com/en/2.1.x/>`_
+
+書き方はrst記法に則る。`こちら <https://planset-study-sphinx.readthedocs.io/ja/latest/04.html>`_ を参照。
+
+.. code-block:: bash
+    
+    # 変更を反映させる
+    $ make html

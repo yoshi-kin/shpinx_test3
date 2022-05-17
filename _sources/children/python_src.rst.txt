@@ -1,0 +1,21 @@
+python\_src
+===================
+
+.. Submodules
+.. ----------
+
+.. python\_src.sample\_src module
+.. ------------------------------
+
+.. .. automodule:: python_src.sample_src
+..    :members:
+..    :undoc-members:
+..    :show-inheritance:
+
+sample_src モジュール
+------------------------
+
+.. automodule:: sample_src
+   :members:
+   :undoc-members:
+   :show-inheritance:

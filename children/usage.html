@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3.プロジェクト &#8212; 社内勉強会～Sphinx～ 1.0 ドキュメント</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="4.参考" href="reference.html" />
+    <link rel="prev" title="2. インストール" href="installation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="ja">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">社内勉強会～Sphinx～ 1.0 ドキュメント</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   1.導入
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   2. インストール
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3.プロジェクト
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference.html">
+   4.参考
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="source.html">
+   4.Pythonソースコード
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/children/usage.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   3.1 Pythonソースコードからドキュメント作成
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.1.1 ディレクトリ作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     3.1.2 ソースからドキュメント作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     3.1.3 設定ファイル
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   3.1 作成したコンテンツからドキュメント作成
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     3.1.1 作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     3.1.2 ディレクトリ構成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html">
+     3.1.3 HTML作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     3.1.4 HTML表示
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     3.1.5 コンテンツ追加
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>3.プロジェクト</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   3.1 Pythonソースコードからドキュメント作成
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.1.1 ディレクトリ作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     3.1.2 ソースからドキュメント作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     3.1.3 設定ファイル
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   3.1 作成したコンテンツからドキュメント作成
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     3.1.1 作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     3.1.2 ディレクトリ構成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#html">
+     3.1.3 HTML作成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     3.1.4 HTML表示
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     3.1.5 コンテンツ追加
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="id1">
+<h1>3.プロジェクト<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">#</a></h1>
+<ul class="simple">
+<li><p>Pythonソースコードからドキュメント作成</p></li>
+<li><p>コンテンツを追加してドキュメント作成</p></li>
+</ul>
+<section id="python">
+<h2>3.1 Pythonソースコードからドキュメント作成<a class="headerlink" href="#python" title="このヘッドラインへのパーマリンク">#</a></h2>
+<section id="id2">
+<h3>3.1.1 ディレクトリ作成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">#</a></h3>
+<div class="line-block">
+<div class="line">/sample_project</div>
+<div class="line-block">
+<div class="line">├── /docs</div>
+<div class="line">└── /src</div>
+<div class="line-block">
+<div class="line">├── __init__.py</div>
+<div class="line">└── sample_src.py</div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h3>3.1.2 ソースからドキュメント作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> sample_project
+$ sphinx-apidoc -F -o docs/ src/
+$ <span class="nb">cd</span> docs
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>3.1.3 設定ファイル<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="n">py</span>
+
+<span class="c1"># コメントアウト解除</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../src&#39;</span><span class="p">))</span>
+
+<span class="c1"># ...</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.napoleon&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># ...</span>
+
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_book_theme&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>src.rst
+
+<span class="gh">src package</span>
+<span class="gh">===========</span>
+
+<span class="cp">.. Submodules</span>
+<span class="cp">.. ----------</span>
+
+<span class="gh">sample\_src module</span>
+<span class="gh">----------------------</span>
+
+<span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> sample_src
+    <span class="nc">:members:</span>
+    <span class="nc">:undoc-members:</span>
+    <span class="nc">:show-inheritance:</span>
+
+<span class="cp">.. Module contents</span>
+<span class="cp">.. ---------------</span>
+
+<span class="cp">.. .. automodule:: src</span>
+<span class="cp">..    :members:</span>
+<span class="cp">..    :undoc-members:</span>
+<span class="cp">..    :show-inheritance:</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make html
+</pre></div>
+</div>
+<p>_build/html/index.htmlを開く。</p>
+</section>
+</section>
+<section id="id5">
+<h2>3.1 作成したコンテンツからドキュメント作成<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">#</a></h2>
+<section id="id6">
+<h3>3.1.1 作成<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">#</a></h3>
+<ul class="simple">
+<li><p>プロジェクト名</p></li>
+<li><p>ドキュメントの製作者</p></li>
+<li><p>プロジェクトのバージョン</p></li>
+<li><p>プロジェクトのロケール</p></li>
+<li><p>プロジェクトディレクトリ</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart -q -p プロジェクト名 -a 製作者 -v プロジェクトバージョン -l プロジェクトロケール プロジェクトディレクトリ
+例）sphinx-quickstart -q -p <span class="s2">&quot;Book Review&quot;</span> -a sphinx-users.jp -v <span class="m">1</span>.0 -l ja project_dir
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>3.1.2 ディレクトリ構成<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">#</a></h3>
+<div class="line-block">
+<div class="line">/sample_project</div>
+<div class="line-block">
+<div class="line">├── _build</div>
+<div class="line">├── _static</div>
+<div class="line">├── _templates</div>
+<div class="line">├── conf.py</div>
+<div class="line">├── index.rst</div>
+<div class="line">├── make.bat</div>
+<div class="line">└── Makefile</div>
+</div>
+</div>
+</section>
+<section id="html">
+<h3>3.1.3 HTML作成<a class="headerlink" href="#html" title="このヘッドラインへのパーマリンク">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make html
+</pre></div>
+</div>
+<p>index.rstをもとに_build/htmlが作成される。</p>
+</section>
+<section id="id8">
+<h3>3.1.4 HTML表示<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>_build/html/index.htmlを開くと、ドキュメントのトップページが表示される。</p>
+</section>
+<section id="id9">
+<h3>3.1.5 コンテンツ追加<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>index.rst</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:maxdepth:</span> 2
+<span class="cp">    .. 一行開ける</span>
+<span class="cp">    .. コンテンツファイル</span>
+<span class="cp">    children/introduction.rst</span>
+</pre></div>
+</div>
+<p>children/introduction.rstを作成</p>
+<p>introduction.rst</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">==========================</span>
+<span class="gh">1.導入 (セクションレベル1）</span>
+<span class="gh">==========================</span>
+
+<span class="gh">1.1 Sphinxとは？ (セクションレベル2）</span>
+<span class="gh">=====================================</span>
+
+Python製のドキュメント作成ツール。
+reStructuredText記法で書いたテキストファイル(.rst)をHTML、 PDFやepubなどの様々な形式へ簡単に変換できる。
+
+<span class="gh">1.2 具体例</span>
+<span class="gh">===========</span>
+
+PythonやFlask、各種Pythonライブラリのドキュメント
+
+<span class="m">*</span> <span class="s">`Pythonドキュメント </span><span class="si">&lt;https://docs.python.org/3/&gt;</span><span class="s">`_</span>
+<span class="m">*</span> <span class="s">`Flaskドキュメント </span><span class="si">&lt;https://flask.palletsprojects.com/en/2.1.x/&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+<p>書き方はrst記法に則る。<a class="reference external" href="https://planset-study-sphinx.readthedocs.io/ja/latest/04.html">こちら</a> を参照。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 変更を反映させる</span>
+$ make html
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="installation.html" title="前へ ページ">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">前へ</p>
+            <p class="prev-next-title">2. インストール</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="reference.html" title="次へ ページ">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">次へ</p>
+        <p class="prev-next-title">4.参考</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By fujiwara<br/>
+  
+      &copy; Copyright 2022, offgrid.jp.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

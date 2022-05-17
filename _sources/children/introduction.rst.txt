@@ -1,0 +1,17 @@
+====================
+1.導入
+====================
+
+1.1 Sphinxとは？
+===================
+
+Python製のドキュメント作成ツール。
+reStructuredText記法で書いたテキストファイル(.rst)をHTML、 PDFやepubなどの様々な形式へ簡単に変換できる。
+
+1.2 具体例
+===========
+
+PythonやFlask、各種Pythonライブラリのドキュメント
+
+* `Pythonドキュメント <https://docs.python.org/3/>`_
+* `Flaskドキュメント <https://flask.palletsprojects.com/en/2.1.x/>`_
