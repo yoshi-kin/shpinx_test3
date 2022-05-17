@@ -13,7 +13,6 @@
    children/installation.rst
    children/usage.rst
    children/reference.rst
-   children/source.rst
 
 .. Indices and tables
 .. ==================
