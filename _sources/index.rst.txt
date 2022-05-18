@@ -9,10 +9,9 @@
 .. toctree::
    :maxdepth: 3
 
-   children/introduction.rst
-   children/installation.rst
-   children/usage.rst
-   children/reference.rst
+   introduction.rst
+   usage.rst
+   reference.rst
 
 .. Indices and tables
 .. ==================

@@ -1,9 +1,9 @@
 ==============================
-3. 使い方
+2. 使い方
 ==============================
 
 * Pythonソースコードからコンテンツ作成
-* コンテンツ作成
+* コンテンツを定義して作成
 
 3.1 Pythonソースコードからコンテンツ作成
 ==========================================
@@ -16,6 +16,29 @@
 |    └── /src
 |        ├── __init__.py
 |        └── sample_src.py
+
+
+.. code-block:: bash
+    
+    sample_src.py
+
+    def func(x, y):
+        """Sample Function
+        document sample function
+
+        Args:
+            x: first arg
+            y: second arg
+
+        Returns:
+            int: sum result
+
+        Examples:
+            >>> print(testfunc(2,5))
+            7
+        """
+        pass
+
 
 3.1.2 ソースからコンテンツ作成
 --------------------------------
@@ -36,7 +59,7 @@
     # コメントアウト解除
     import os
     import sys
-    sys.path.insert(0, os.path.abspath('../../src'))
+    sys.path.insert(0, os.path.abspath('../'))
 
     # ...
 
@@ -49,33 +72,8 @@
 
     # ...
 
+    # https://sphinx-themes.org/
     html_theme = 'sphinx_book_theme'
-
-.. code-block:: rst
-    
-    src.rst
-
-    src package
-    ===========
-
-    .. Submodules
-    .. ----------
-
-    sample\_src module
-    ----------------------
-
-    .. automodule:: sample_src
-        :members:
-        :undoc-members:
-        :show-inheritance:
-
-    .. Module contents
-    .. ---------------
-
-    .. .. automodule:: src
-    ..    :members:
-    ..    :undoc-members:
-    ..    :show-inheritance:
 
 3.1.4 HTML作成
 ---------------
@@ -86,7 +84,7 @@
 
 _build/html/index.htmlを開く。
 
-3.2 コンテンツ作成
+3.2 コンテンツを定義して作成
 ==========================================
 
 3.2.1 作成
